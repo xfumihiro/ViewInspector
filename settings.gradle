@@ -1,0 +1,1 @@
+include ':sample', ':view-inspector-plugin', ':view-inspector-runtime'

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="shadow_overlay_background">#dd000000</color>
+
+  <!-- Toolbar -->
+  <color name="toggle_background">@android:color/holo_red_dark</color>
+  <color name="boundary_background">@android:color/holo_orange_dark</color>
+  <color name="layer_background">@android:color/holo_green_dark</color>
+  <color name="event_background">@android:color/holo_blue_dark</color>
+  <color name="settings_background">@android:color/holo_purple</color>
+
+  <!-- Menu -->
+  <color name="boundary_menu_background">#ddff8800</color>
+  <color name="layer_menu_background">#dd669900</color>
+  <color name="event_menu_background">#dd0099cc</color>
+  <color name="settings_menu_background">#ddaa66cc</color>
+
+  <!-- Progressbar -->
+  <color name="progressbar_background">@android:color/holo_orange_dark</color>
+  <color name="progressbar_prompt_color">#FFFFFF</color>
+  <color name="progressbar_text_color">#FFFFFF</color>
+
+  <!-- View Suspect -->
+  <color name="view_suspect_class">#de000000</color>
+  <color name="view_suspect_id">#ff33b5e5</color>
+</resources>

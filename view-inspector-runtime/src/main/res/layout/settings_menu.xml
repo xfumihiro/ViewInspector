@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout
+      android:tag="@string/view_tag"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/settings_menu_background"
+      >
+    <LinearLayout
+        android:tag="@string/view_tag"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        android:orientation="horizontal"
+        >
+      <TextView
+          android:tag="@string/view_tag"
+          android:text="@string/settings_menu_log_view_events"
+          style="@style/MenuTextView"
+          />
+      <Switch
+          android:tag="@string/view_tag"
+          android:id="@+id/log_view_events_switch"
+          style="@style/MenuSwitch"
+          />
+    </LinearLayout>
+  </LinearLayout>
+</merge>
