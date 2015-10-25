@@ -1,6 +1,8 @@
 View Inspector Plugin
 =====================
 
+[ ![Download](https://api.bintray.com/packages/xfumihiro/maven/ViewInspector/images/download.svg) ](https://bintray.com/xfumihiro/maven/ViewInspector/_latestVersion)
+
 View inspection toolbar for android development.
 
 ![](images/sample.gif)
@@ -36,7 +38,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.github.xfumihiro.view-inspector:view-inspector-plugin:0.1.0'
+    classpath 'com.github.xfumihiro.view-inspector:view-inspector-plugin:0.1.1'
   }
 }
 
