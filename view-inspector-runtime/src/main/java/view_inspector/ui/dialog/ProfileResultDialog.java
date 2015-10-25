@@ -3,7 +3,7 @@ package view_inspector.ui.dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.v7.internal.view.ContextThemeWrapper;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.ListView;
 import javax.inject.Inject;
@@ -27,7 +27,7 @@ public class ProfileResultDialog extends BaseDialog {
 
     setTitle(samples > 1 ? "Profile Results (" + samples + " samples)" : "Profile Results");
 
-    setButton(BUTTON_POSITIVE, "Ok", new OnClickListener() {
+    setButton(BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
       @Override public void onClick(DialogInterface dialog, int which) {
       }
     });

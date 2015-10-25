@@ -21,7 +21,7 @@ configure(subprojects.findAll { it.name != 'sample' }) {
 }
 
 ext {
-  compileSdkVersion = 23
+  compileSdkVersion = 21
   buildToolsVersion = '23.0.1'
 
   pomConfig = {

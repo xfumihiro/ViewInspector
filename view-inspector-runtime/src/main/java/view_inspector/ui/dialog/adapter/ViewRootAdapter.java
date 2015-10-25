@@ -1,7 +1,7 @@
 package view_inspector.ui.dialog.adapter;
 
 import android.content.Context;
-import android.support.v7.internal.view.ContextThemeWrapper;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
