@@ -34,9 +34,12 @@ public class BaseDialog extends AlertDialog {
 
   @Override public void onDetachedFromWindow() {
     bypassInterceptor.set(false);
+    super.onDetachedFromWindow();
+  }
+
+  protected void restoreOpenedMenu() {
     toolbar.toggleToolbar();
     if (mMenu != null) toolbar.openMenu(mMenu);
-    super.onDetachedFromWindow();
   }
 
   public static int getDialogTheme(Context context) {

@@ -26,11 +26,13 @@ public class SetViewRootDialog extends BaseDialog {
     setView(listView);
     setButton(BUTTON_NEGATIVE, "Cancel", new OnClickListener() {
       @Override public void onClick(DialogInterface dialog, int which) {
+        restoreOpenedMenu();
       }
     });
 
     setButton(BUTTON_POSITIVE, "Ok", new OnClickListener() {
       @Override public void onClick(DialogInterface dialog, int which) {
+        restoreOpenedMenu();
         listener.onViewRootSelected(
             (View) listView.getItemAtPosition(listView.getCheckedItemPosition()));
       }
