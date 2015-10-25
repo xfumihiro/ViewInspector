@@ -183,7 +183,7 @@ class ViewProxyGenerator {
   }
 
   private static void generateOnLayoutMethod(JavaWriter javaWriter) {
-    beginOnLayoutMethod(javaWriter, METHOD_ON_LAYOUT, PROTECTED)
+    beginOnLayoutMethod(javaWriter, METHOD_ON_LAYOUT, PUBLIC)
     generateInterceptorConditional(javaWriter, METHOD_ON_LAYOUT, PARAM_CHANGED,
         PARAM_LEFT, PARAM_TOP, PARAM_RIGHT, PARAM_BOTTOM)
     javaWriter.endMethod()
@@ -209,7 +209,7 @@ class ViewProxyGenerator {
     javaWriter.emitStatement("super.%s(%s)", METHOD_DRAW, PARAM_CANVAS)
     javaWriter.endMethod()
 
-    beginDrawMethod(javaWriter, METHOD_ON_DRAW, PROTECTED)
+    beginDrawMethod(javaWriter, METHOD_ON_DRAW, PUBLIC)
     generateInterceptorConditional(javaWriter, METHOD_ON_DRAW, PARAM_CANVAS)
     javaWriter.endMethod()
 
