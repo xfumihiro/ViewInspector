@@ -34,7 +34,6 @@ import com.google.dexmaker.TypeId;
 import java.io.IOException;
 
 import static java.lang.reflect.Modifier.PRIVATE;
-import static java.lang.reflect.Modifier.PROTECTED;
 import static java.lang.reflect.Modifier.PUBLIC;
 import static view_inspector.probe.ViewProxyBuilder.CONSTRUCTOR_ARG_TYPES;
 
@@ -187,7 +186,7 @@ final class DexProxyBuilder {
     final MethodId<G, Void> methodId =
         generatedType.getMethod(VOID_TYPE, methodName, TypeId.BOOLEAN, TypeId.INT, TypeId.INT,
             TypeId.INT, TypeId.INT);
-    final Code code = dexMaker.declare(methodId, PROTECTED);
+    final Code code = dexMaker.declare(methodId, PUBLIC);
 
     final Local<G> localThis = code.getThis(generatedType);
     final Local<Interceptor> nullInterceptor = code.newLocal(INTERCEPTOR_TYPE);
@@ -284,7 +283,7 @@ final class DexProxyBuilder {
   private static <T, G extends T> void generateDrawMethods(DexMaker dexMaker,
       TypeId<G> generatedType, TypeId<T> baseType) {
     generateDrawMethod(dexMaker, generatedType, baseType, ViewMethod.DRAW, PUBLIC);
-    generateDrawMethod(dexMaker, generatedType, baseType, ViewMethod.ON_DRAW, PROTECTED);
+    generateDrawMethod(dexMaker, generatedType, baseType, ViewMethod.ON_DRAW, PUBLIC);
   }
 
   /**
