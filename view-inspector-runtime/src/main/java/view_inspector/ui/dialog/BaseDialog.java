@@ -25,25 +25,17 @@ public class BaseDialog extends AlertDialog {
     setCanceledOnTouchOutside(true);
   }
 
-  @Override protected void onStart() {
-    super.onStart();
+  @Override public void onAttachedToWindow() {
     bypassInterceptor.set(true);
     mMenu = toolbar.getMenu();
     toolbar.closeToolbar();
-  }
-
-  @Override protected void onStop() {
-    bypassInterceptor.set(false);
-    toolbar.toggleToolbar();
-    if (mMenu != null) toolbar.openMenu(mMenu);
-    super.onStop();
-  }
-
-  @Override public void onAttachedToWindow() {
     super.onAttachedToWindow();
   }
 
   @Override public void onDetachedFromWindow() {
+    bypassInterceptor.set(false);
+    toolbar.toggleToolbar();
+    if (mMenu != null) toolbar.openMenu(mMenu);
     super.onDetachedFromWindow();
   }
 
