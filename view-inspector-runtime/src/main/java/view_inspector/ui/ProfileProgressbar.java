@@ -15,7 +15,6 @@ import view_inspector.R;
 import view_inspector.dagger.scope.PerActivity;
 
 import static android.graphics.PixelFormat.TRANSLUCENT;
-import static android.os.Build.VERSION_CODES.LOLLIPOP_MR1;
 import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.WindowManager.LayoutParams.FLAG_LAYOUT_INSET_DECOR;
 import static android.view.WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN;
@@ -42,7 +41,7 @@ import static android.view.WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
   public static WindowManager.LayoutParams createLayoutParams(Context context) {
     Resources res = context.getResources();
     mLayoutHeight = res.getDimensionPixelSize(R.dimen.toolbar_height);
-    if (Build.VERSION.SDK_INT > LOLLIPOP_MR1) {
+    if (Build.VERSION.SDK_INT > 22) { // LOLLIPOP_MR1
       mLayoutHeight = res.getDimensionPixelSize(R.dimen.toolbar_height_m);
     }
 

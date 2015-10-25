@@ -26,7 +26,7 @@ class ViewInspectorPlugin implements Plugin<Project> {
       debugCompile 'com.f2prateek.rx.preferences:rx-preferences:1.0.0'
       debugCompile 'com.github.frankiesardo:auto-parcel:0.3'
       debugCompile 'com.jakewharton.scalpel:scalpel:1.1.2'
-      debugCompile 'com.android.support:appcompat-v7:23.1.0'
+      debugCompile 'com.android.support:appcompat-v7:21.0.3'
     }
 
     final def log = project.logger

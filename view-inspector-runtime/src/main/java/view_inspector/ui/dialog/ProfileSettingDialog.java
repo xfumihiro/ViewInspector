@@ -2,7 +2,7 @@ package view_inspector.ui.dialog;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v7.internal.view.ContextThemeWrapper;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;

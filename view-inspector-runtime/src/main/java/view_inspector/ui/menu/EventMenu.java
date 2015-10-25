@@ -2,7 +2,7 @@ package view_inspector.ui.menu;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.support.v7.internal.view.ContextThemeWrapper;
+import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CompoundButton;

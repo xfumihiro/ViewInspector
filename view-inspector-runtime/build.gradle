@@ -64,7 +64,7 @@ dependencies {
 
   compile 'com.jakewharton.scalpel:scalpel:1.1.2'
 
-  compile 'com.android.support:appcompat-v7:23.1.0'
+  compile 'com.android.support:appcompat-v7:21.0.3'
 }
 
 apply from: 'publish.gradle'

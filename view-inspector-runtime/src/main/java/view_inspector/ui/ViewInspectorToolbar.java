@@ -5,7 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Build;
-import android.support.v7.internal.view.ContextThemeWrapper;
+import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
@@ -28,7 +28,6 @@ import view_inspector.ui.menu.LayerMenu;
 import view_inspector.ui.menu.SettingsMenu;
 
 import static android.graphics.PixelFormat.TRANSLUCENT;
-import static android.os.Build.VERSION_CODES.LOLLIPOP_MR1;
 import static android.view.WindowManager.LayoutParams.FLAG_LAYOUT_INSET_DECOR;
 import static android.view.WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN;
 import static android.view.WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS;
@@ -69,7 +68,7 @@ import static android.view.WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
     int width = res.getDimensionPixelSize(R.dimen.toolbar_header_width)
         + res.getDimensionPixelSize(R.dimen.toolbar_icon_width) * TOOLBAR_MENU_ITEMS;
     int height = res.getDimensionPixelSize(R.dimen.toolbar_height);
-    if (Build.VERSION.SDK_INT > LOLLIPOP_MR1) {
+    if (Build.VERSION.SDK_INT > 22) { // LOLLIPOP_MR1
       height = res.getDimensionPixelSize(R.dimen.toolbar_height_m);
     }
 

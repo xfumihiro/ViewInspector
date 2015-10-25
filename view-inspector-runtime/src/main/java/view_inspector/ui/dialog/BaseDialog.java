@@ -1,9 +1,9 @@
 package view_inspector.ui.dialog;
 
+import android.app.AlertDialog;
 import android.content.Context;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.internal.view.ContextThemeWrapper;
 import android.util.TypedValue;
+import android.view.ContextThemeWrapper;
 import com.f2prateek.rx.preferences.Preference;
 import javax.inject.Inject;
 import view_inspector.R;

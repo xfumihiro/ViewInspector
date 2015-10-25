@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <style name="DialogTheme" parent="Theme.AppCompat.Dialog.Alert"/>
-  <style name="DialogThemeLight" parent="Theme.AppCompat.Light.Dialog.Alert"/>
+  <style name="DialogTheme" parent="Theme.AppCompat.Dialog"/>
+  <style name="DialogThemeLight" parent="Theme.AppCompat.Light.Dialog"/>
   <style name="MenuTextView">
     <item name="android:layout_width">0dp</item>
     <item name="android:layout_weight">1</item>
