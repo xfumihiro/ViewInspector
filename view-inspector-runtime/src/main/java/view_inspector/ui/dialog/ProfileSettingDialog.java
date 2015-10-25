@@ -33,6 +33,7 @@ public class ProfileSettingDialog extends BaseDialog {
 
     setButton(BUTTON_NEGATIVE, "Cancel", new OnClickListener() {
       @Override public void onClick(DialogInterface dialog, int which) {
+        restoreOpenedMenu();
       }
     });
 
@@ -43,6 +44,7 @@ public class ProfileSettingDialog extends BaseDialog {
         profileProgressbar.setSamples(mProfileSample);
         mMenu = null;
         dismiss();
+        toolbar.toggleToolbar();
       }
     });
   }

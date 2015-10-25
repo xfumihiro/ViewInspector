@@ -29,6 +29,7 @@ public class ProfileResultDialog extends BaseDialog {
 
     setButton(BUTTON_POSITIVE, "Ok", new DialogInterface.OnClickListener() {
       @Override public void onClick(DialogInterface dialog, int which) {
+        restoreOpenedMenu();
       }
     });
   }
@@ -45,5 +46,10 @@ public class ProfileResultDialog extends BaseDialog {
     db.getWritableDatabase().delete(ViewProfile.TABLE, null, null);
 
     super.onDetachedFromWindow();
+  }
+
+  @Override public void onBackPressed() {
+    super.onBackPressed();
+    restoreOpenedMenu();
   }
 }
