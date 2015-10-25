@@ -3,6 +3,8 @@ package view_inspector.ui;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.view.ContextThemeWrapper;
@@ -222,9 +224,22 @@ import static android.view.WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
 
   public void showProgressbar() {
     windowManager.addView(profileProgressbar, ProfileProgressbar.createLayoutParams(mContext));
+
+    // lock screen orientation
+    int currentOrientation = mContext.getResources().getConfiguration().orientation;
+    if (currentOrientation == Configuration.ORIENTATION_LANDSCAPE) {
+      ((Activity) mContext).setRequestedOrientation(
+          ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+    } else {
+      ((Activity) mContext).setRequestedOrientation(
+          ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT);
+    }
   }
 
   private void closeProgressbar() {
     windowManager.removeViewImmediate(profileProgressbar);
+
+    // unlock screen orientation
+    ((Activity) mContext).setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
   }
 }
