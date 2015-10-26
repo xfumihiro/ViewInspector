@@ -74,7 +74,8 @@ class ViewInspectorPlugin implements Plugin<Project> {
       def sourcePath = "${project.buildDir}/generated/source/view-inspector/${variant.dirName}"
       def packageName = "${variant.mergedFlavor.applicationId}.view_inspector"
       if (variant.mergedFlavor.applicationId == null) {
-        File androidManifest = project.file('src/main/AndroidManifest.xml')
+        def manifestFile = "${project.buildDir}/intermediates/manifests/full/${variant.dirName}/AndroidManifest.xml"
+        File androidManifest = project.file(manifestFile)
         def manifest = new XmlSlurper().parse(androidManifest)
         packageName = "${manifest.@package.text()}.view_inspector"
       }
