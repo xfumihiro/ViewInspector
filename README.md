@@ -59,6 +59,12 @@ Sriram Ramani
 
 Toolbar fashion : [Telecine](https://github.com/JakeWharton/Telecine) by Jake Wharton
 
+Developed by
+------------
+Fumihiro Xue
+ * [@xfumihiro](https://twitter.com/xfumihiro)
+ * [+xfumihiro](https://plus.google.com/u/0/107636471060158273635)
+
 License
 -------
 
