@@ -74,7 +74,6 @@ import view_inspector.ui.ViewInspectorToolbar;
       showOutline.set(false);
       probeMeasures.set(false);
       bypassInterceptor.set(false);
-      logViewEvents.set(true);
       scalpelEnabled.set(false);
 
       Probe.deploy(context, interceptor);
