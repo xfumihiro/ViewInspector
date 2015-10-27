@@ -37,7 +37,7 @@ android {
 
   defaultConfig {
     applicationId "com.github.xfumihiro.view_inspector.sample"
-    minSdkVersion 14
+    minSdkVersion 21
     targetSdkVersion 21
     versionCode 1
     versionName "1.0"
