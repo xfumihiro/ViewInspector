@@ -4,7 +4,7 @@ Change Log
 Version 0.1.1 *(2015-10-26)*
 ----------------------------
 
- * Works with compileSdkVersion >= 21
+ * Works with compileSdkVersion >= 21 but not Marshmallow
  * Fix: Attempting to assign weaker access privileges
  * Fix: Several UI bugs
 
