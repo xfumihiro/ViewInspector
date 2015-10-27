@@ -78,7 +78,7 @@ import static android.content.Context.WINDOW_SERVICE;
 
   @Provides @Singleton @LogViewEvents Preference<Boolean> provideLogViewEventsFlag(
       RxSharedPreferences prefs) {
-    return prefs.getBoolean("logViewEvents", true);
+    return prefs.getBoolean("logViewEvents", false);
   }
 
   @Provides @Singleton @Scalpel3D Preference<Boolean> provideScalpel3dFlag(
