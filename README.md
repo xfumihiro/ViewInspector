@@ -38,7 +38,7 @@ buildscript {
   }
 
   dependencies {
-    classpath 'com.github.xfumihiro.view-inspector:view-inspector-plugin:0.1.1'
+    classpath 'com.github.xfumihiro.view-inspector:view-inspector-plugin:0.1.2'
   }
 }
 

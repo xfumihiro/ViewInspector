@@ -1,6 +1,14 @@
 Change Log
 ==========
 
+Version 0.1.2 *(2015-10-28)*
+----------------------------
+
+ * Fix: Issues with hard-coded Manifest file path
+ * Fix: Wrong class name resolved with WebView
+ * Fix: Several UI bugs
+
+
 Version 0.1.1 *(2015-10-26)*
 ----------------------------
 
