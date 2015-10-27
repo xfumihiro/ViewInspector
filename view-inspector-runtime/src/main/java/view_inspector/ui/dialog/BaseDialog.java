@@ -47,4 +47,9 @@ public class BaseDialog extends AlertDialog {
     context.getTheme().resolveAttribute(R.attr.isLightTheme, outValue, true);
     return outValue.data != 0 ? R.style.DialogThemeLight : R.style.DialogTheme;
   }
+
+  @Override public void onBackPressed() {
+    super.onBackPressed();
+    restoreOpenedMenu();
+  }
 }
