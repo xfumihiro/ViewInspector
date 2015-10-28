@@ -7,10 +7,6 @@
     android:orientation="vertical"
     android:background="#999999"
     >
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
     <LinearLayout
       android:id="@+id/top_layout"
       android:layout_width="match_parent"
