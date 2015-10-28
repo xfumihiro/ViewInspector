@@ -22,12 +22,17 @@ import com.android.annotations.NonNull
 class LayoutResourceParser {
   private LayoutResourceParser() {}
 
-  public static Set<String> parse(@NonNull File layoutFile) {
+  public static Set<String> parse(@NonNull File layoutFile, String[] excludePackages) {
     Set<String> viewClassNames = new HashSet<String>()
 
     def rootNode = new XmlParser().parse(layoutFile)
     traverseLayoutXml(rootNode, viewClassNames)
 
+    excludePackages.each { excludePackage ->
+      viewClassNames.removeAll {
+        it.startsWith(excludePackage)
+      }
+    }
     return viewClassNames
   }
 

@@ -46,6 +46,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'view-inspector'
 ```
 
+To exclude packages:
+```
+viewInspector {
+  excludePackages = ['android.widget.Space', 'package.to.exclude']
+}
+```
+
 Snapshots of the development version are available in [Sonatype's `snapshots` repository][snap].
 
 Inspirations & Dependencies
