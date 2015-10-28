@@ -186,10 +186,10 @@ import static android.view.WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
     animator.start();
     if (mToolbar.getTranslationX() < mToolbarClosedWidth) {
       mToggleButton.setImageDrawable(
-          getResources().getDrawable(R.drawable.ic_chevron_left_white_24px));
+          getResources().getDrawable(R.drawable.ic_chevron_left_white_24dp));
     } else {
       mToggleButton.setImageDrawable(
-          getResources().getDrawable(R.drawable.ic_chevron_right_white_24px));
+          getResources().getDrawable(R.drawable.ic_chevron_right_white_24dp));
     }
   }
 
@@ -200,7 +200,7 @@ import static android.view.WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
     animator.setInterpolator(new DecelerateInterpolator());
     animator.start();
     mToggleButton.setImageDrawable(
-        getResources().getDrawable(R.drawable.ic_chevron_left_white_24px));
+        getResources().getDrawable(R.drawable.ic_chevron_left_white_24dp));
   }
 
   @Override public void onProfileDone() {
