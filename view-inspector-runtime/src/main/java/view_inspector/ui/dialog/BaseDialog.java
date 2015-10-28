@@ -2,6 +2,7 @@ package view_inspector.ui.dialog;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.util.TypedValue;
 import android.view.ContextThemeWrapper;
 import com.f2prateek.rx.preferences.Preference;
@@ -23,6 +24,11 @@ public class BaseDialog extends AlertDialog {
         .inject(this);
     setCancelable(true);
     setCanceledOnTouchOutside(true);
+    setOnCancelListener(new OnCancelListener() {
+      @Override public void onCancel(DialogInterface dialog) {
+        restoreOpenedMenu();
+      }
+    });
   }
 
   @Override public void onAttachedToWindow() {
