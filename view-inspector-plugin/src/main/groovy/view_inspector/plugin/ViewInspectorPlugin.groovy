@@ -29,6 +29,8 @@ class ViewInspectorPlugin implements Plugin<Project> {
       debugCompile 'com.android.support:appcompat-v7:21.0.3'
     }
 
+    project.extensions.create("viewInspector", ViewInspectorPluginExtension)
+
     final def log = project.logger
     final def variants = project.android.applicationVariants
 
@@ -87,6 +89,7 @@ class ViewInspectorPlugin implements Plugin<Project> {
       task.outputDir = new File("${sourcePath}/${packageName.replace('.', '/')}")
       task.inputFiles = project.fileTree(dir: variant.mergeResources.outputDir)
           .matching { include 'layout*/*.xml' }
+      task.excludePackages = project.viewInspector.excludePackages
 
       // Set task dependencies
       task.dependsOn variant.mergeResources

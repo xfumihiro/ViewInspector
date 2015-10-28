@@ -22,6 +22,8 @@ import org.gradle.api.tasks.InputFiles
 import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import org.gradle.api.tasks.incremental.IncrementalTaskInputs
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.Optional
 import view_inspector.plugin.internal.LayoutResourceParser
 import view_inspector.plugin.internal.ViewProxyGenerator
 
@@ -34,6 +36,10 @@ class ViewInspectorTask extends DefaultTask {
 
   @NonNull @InputFiles
   Iterable<File> inputFiles
+
+  @Input
+  @Optional
+  String[] excludePackages
 
   @TaskAction
   void taskAction(IncrementalTaskInputs inputs) {
@@ -72,7 +78,7 @@ class ViewInspectorTask extends DefaultTask {
 
   private void parseLayoutFiles(Iterable<File> layoutFiles) {
     layoutFiles.each { layoutFile ->
-      Set<String> viewClassNames = LayoutResourceParser.parse(layoutFile)
+      Set<String> viewClassNames = LayoutResourceParser.parse(layoutFile, excludePackages)
       for (String viewClassName : viewClassNames) {
         String filename = ViewProxyGenerator.filenameForClassName(viewClassName)
         File proxyFile = new File(outputDir, filename)
