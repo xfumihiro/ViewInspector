@@ -3,7 +3,7 @@
     package="view_inspector"
     >
 
-  <uses-sdk android:minSdkVersion="21"/>
+  <uses-sdk android:minSdkVersion="14"/>
 
   <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
