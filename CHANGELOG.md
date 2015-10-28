@@ -1,6 +1,14 @@
 Change Log
 ==========
 
+Version 0.1.3 *(2015-10-29)*
+----------------------------
+
+ * Support exclude packages option
+ * View filter can now be set in Settings Menu
+ * Fix: Several UI bugs
+
+
 Version 0.1.2 *(2015-10-28)*
 ----------------------------
 
