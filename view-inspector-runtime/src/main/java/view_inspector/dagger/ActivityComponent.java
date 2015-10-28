@@ -7,7 +7,9 @@ import view_inspector.ui.ViewInspectorToolbar;
 import view_inspector.ui.dialog.BaseDialog;
 import view_inspector.ui.dialog.ProfileResultDialog;
 import view_inspector.ui.dialog.ProfileSettingDialog;
+import view_inspector.ui.dialog.SetViewFilterDialog;
 import view_inspector.ui.dialog.adapter.ProfileResultAdapter;
+import view_inspector.ui.dialog.adapter.ViewFilterAdapter;
 import view_inspector.ui.dialog.adapter.ViewRootAdapter;
 import view_inspector.ui.menu.BaseMenu;
 import view_inspector.ui.menu.BoundaryMenu;
@@ -43,4 +45,8 @@ public interface ActivityComponent {
   void inject(ProfileResultDialog profileResultDialog);
 
   void inject(ProfileSettingDialog profileSettingDialog);
+
+  void inject(ViewFilterAdapter viewFilterAdapter);
+
+  void inject(SetViewFilterDialog setViewFilterDialog);
 }

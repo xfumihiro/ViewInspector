@@ -25,6 +25,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import com.f2prateek.rx.preferences.Preference;
 import java.util.List;
+import java.util.Set;
 import java.util.WeakHashMap;
 import javax.inject.Inject;
 import rx.functions.Action1;
@@ -40,6 +41,7 @@ import view_inspector.dagger.qualifier.ShowMargin;
 import view_inspector.dagger.qualifier.ShowMeasureCount;
 import view_inspector.dagger.qualifier.ShowOutline;
 import view_inspector.dagger.qualifier.ShowPadding;
+import view_inspector.dagger.qualifier.ViewFilter;
 import view_inspector.dagger.qualifier.ViewSuspects;
 import view_inspector.dagger.qualifier.ViewTag;
 import view_inspector.dagger.scope.PerActivity;
@@ -70,6 +72,7 @@ import view_inspector.util.ViewUtil;
   @Inject ProfileUtil profileUtil;
   @Inject @ViewTag String viewTag;
   @Inject ViewInspectorScalpelLayout scalpelLayout;
+  @Inject @ViewFilter Preference<Set<String>> viewFilterSet;
 
   @Inject public ViewInspectorInterceptor(final Context context) {
     ViewInspector.runtimeComponentMap.get(context).inject(this);
@@ -79,37 +82,32 @@ import view_inspector.util.ViewUtil;
 
     showOutline.asObservable().subscribe(new Action1<Boolean>() {
       @Override public void call(Boolean aBoolean) {
-        scalpelLayout.invalidate();
-        invalidateViewSuspects();
+        invalidateScalpelAndSuspects();
       }
     });
 
     showMargin.asObservable().subscribe(new Action1<Boolean>() {
       @Override public void call(Boolean aBoolean) {
-        scalpelLayout.invalidate();
-        invalidateViewSuspects();
+        invalidateScalpelAndSuspects();
       }
     });
 
     showPadding.asObservable().subscribe(new Action1<Boolean>() {
       @Override public void call(Boolean aBoolean) {
-        scalpelLayout.invalidate();
-        invalidateViewSuspects();
+        invalidateScalpelAndSuspects();
       }
     });
 
     probeMeasures.asObservable().subscribe(new Action1<Boolean>() {
       @Override public void call(Boolean aBoolean) {
         if (ViewInspector.viewRoot != null) ViewInspector.viewRoot.requestLayout();
-        scalpelLayout.invalidate();
-        invalidateViewSuspects();
+        invalidateScalpelAndSuspects();
       }
     });
 
     showMeasureCount.asObservable().subscribe(new Action1<Boolean>() {
       @Override public void call(Boolean aBoolean) {
-        scalpelLayout.invalidate();
-        invalidateViewSuspects();
+        invalidateScalpelAndSuspects();
       }
     });
 
@@ -125,8 +123,7 @@ import view_inspector.util.ViewUtil;
         bypassInterceptor.set(aBoolean);
         if (!aBoolean) {
           if (ViewInspector.viewRoot != null) ViewInspector.viewRoot.requestLayout();
-          scalpelLayout.invalidate();
-          invalidateViewSuspects();
+          invalidateScalpelAndSuspects();
         }
       }
     });
@@ -152,7 +149,7 @@ import view_inspector.util.ViewUtil;
 
   @Override public void draw(View view, Canvas canvas) {
     super.draw(view, canvas);
-    if (isNotBypassed(view)) {
+    if (isNotBypassed(view) && isNotFiltered(view)) {
       if (showOutline.get()) DrawUtil.drawOutline(mContext, view, canvas);
       if (showMargin.get()) DrawUtil.drawMargin(view, canvas);
       if (showPadding.get()) DrawUtil.drawPadding(view, canvas);
@@ -160,7 +157,7 @@ import view_inspector.util.ViewUtil;
   }
 
   @Override public void onMeasure(View view, int widthMeasureSpec, int heightMeasureSpec) {
-    if (isNotBypassed(view)) {
+    if (isNotBypassed(view) && isNotFiltered(view)) {
       if (ViewInspector.viewRoot == null && ViewUtil.isLevelTwoView(view)) {
         Log.d(ViewInspector.TAG, "insert ScalpelLayout as a parent of view: " + view);
         insertScalpelLayout(view);
@@ -175,7 +172,7 @@ import view_inspector.util.ViewUtil;
 
     super.onMeasure(view, widthMeasureSpec, heightMeasureSpec);
 
-    if (probeMeasures.get() && isNotBypassed(view)) {
+    if (probeMeasures.get() && isNotBypassed(view) && isNotFiltered(view)) {
       if (!(view instanceof ViewGroup)) {
         final Integer measureCount = mMeasureByView.get(view);
         mMeasureByView.put(view, (measureCount != null ? measureCount : 0) + 1);
@@ -186,20 +183,22 @@ import view_inspector.util.ViewUtil;
   @Override public void onLayout(View view, boolean changed, int l, int t, int r, int b) {
     if (isNotBypassed(view)) {
       if (!viewSuspects.contains(view)) viewSuspects.add(view);
-      if (logViewEvents.get()) LogUtil.logOnLayout(view, changed, l, t, r, b);
+      if (logViewEvents.get() && isNotFiltered(view)) {
+        LogUtil.logOnLayout(view, changed, l, t, r, b);
+      }
     }
 
     super.onLayout(view, changed, l, t, r, b);
   }
 
   @Override public void onDraw(View view, Canvas canvas) {
-    if (isNotBypassed(view)) {
+    if (isNotBypassed(view) && isNotFiltered(view)) {
       if (logViewEvents.get()) LogUtil.logOnDraw(view);
     }
 
     super.onDraw(view, canvas);
 
-    if (probeMeasures.get() && isNotBypassed(view)) {
+    if (probeMeasures.get() && isNotBypassed(view) && isNotFiltered(view)) {
       if (view instanceof ViewGroup || isExcluded(view)) {
         return;
       }
@@ -214,7 +213,7 @@ import view_inspector.util.ViewUtil;
   }
 
   @Override public void requestLayout(View view) {
-    if (isNotBypassed(view)) {
+    if (isNotBypassed(view) && isNotFiltered(view)) {
       if (logViewEvents.get()) LogUtil.logRequestLayout(view);
     }
 
@@ -231,7 +230,7 @@ import view_inspector.util.ViewUtil;
   }
 
   @Override public void forceLayout(View view) {
-    if (isNotBypassed(view)) {
+    if (isNotBypassed(view) && isNotFiltered(view)) {
       if (logViewEvents.get()) LogUtil.logForceLayout(view);
     }
 
@@ -295,5 +294,14 @@ import view_inspector.util.ViewUtil;
     for (View view : viewSuspects) {
       view.invalidate();
     }
+  }
+
+  private boolean isNotFiltered(View view) {
+    return !viewFilterSet.get().contains(ViewUtil.getClassName(view));
+  }
+
+  public void invalidateScalpelAndSuspects() {
+    scalpelLayout.invalidate();
+    invalidateViewSuspects();
   }
 }

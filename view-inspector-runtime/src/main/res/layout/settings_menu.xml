@@ -24,5 +24,19 @@
           style="@style/MenuSwitch"
           />
     </LinearLayout>
+    <include layout="@layout/menu_separator"/>
+    <LinearLayout
+        android:tag="@string/view_tag"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        android:orientation="horizontal"
+        >
+      <TextView
+          android:tag="@string/view_tag"
+          android:id="@+id/view_filter"
+          android:text="@string/settings_menu_set_view_filter"
+          style="@style/MenuTextView"
+          />
+    </LinearLayout>
   </LinearLayout>
 </merge>
