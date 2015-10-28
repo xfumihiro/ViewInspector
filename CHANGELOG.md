@@ -1,6 +1,13 @@
 Change Log
 ==========
 
+Version 0.1.4 *(2015-10-29)*
+----------------------------
+
+ * Fix: Crashes on Pre-Lollipop due to Vector Drawables
+ * Fix: Correct minSdkVersion to 14
+
+
 Version 0.1.3 *(2015-10-29)*
 ----------------------------
 
