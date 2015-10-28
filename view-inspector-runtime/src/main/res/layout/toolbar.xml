@@ -20,7 +20,7 @@
         android:id="@+id/toggle_menu"
         android:layout_width="@dimen/toolbar_icon_width"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_chevron_left_white_24px"
+        android:src="@drawable/ic_chevron_left_white_24dp"
         android:background="@color/toggle_background"
         />
     <ImageButton
@@ -28,7 +28,7 @@
         android:id="@+id/outline_menu"
         android:layout_width="@dimen/toolbar_icon_width"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_fullscreen_white_24px"
+        android:src="@drawable/ic_fullscreen_white_24dp"
         android:background="@color/boundary_background"
         />
     <ImageButton
@@ -36,7 +36,7 @@
         android:id="@+id/layer_menu"
         android:layout_width="@dimen/toolbar_icon_width"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_layers_white_24px"
+        android:src="@drawable/ic_layers_white_24dp"
         android:background="@color/layer_background"
         />
     <ImageButton
@@ -44,7 +44,7 @@
         android:id="@+id/event_menu"
         android:layout_width="@dimen/toolbar_icon_width"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_timer_white_24px"
+        android:src="@drawable/ic_timer_white_24dp"
         android:background="@color/event_background"
         />
     <ImageButton
@@ -52,7 +52,7 @@
         android:id="@+id/settings_menu"
         android:layout_width="@dimen/toolbar_icon_width"
         android:layout_height="match_parent"
-        android:src="@drawable/ic_settings_white_24px"
+        android:src="@drawable/ic_settings_white_24dp"
         android:background="@color/settings_background"
         />
   </LinearLayout>
