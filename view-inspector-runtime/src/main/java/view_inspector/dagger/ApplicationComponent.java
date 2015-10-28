@@ -4,6 +4,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.view.WindowManager;
 import com.f2prateek.rx.preferences.Preference;
 import dagger.Component;
+import java.util.Set;
 import javax.inject.Singleton;
 import view_inspector.dagger.qualifier.BypassInterceptor;
 import view_inspector.dagger.qualifier.LogViewEvents;
@@ -16,6 +17,7 @@ import view_inspector.dagger.qualifier.ShowMargin;
 import view_inspector.dagger.qualifier.ShowMeasureCount;
 import view_inspector.dagger.qualifier.ShowOutline;
 import view_inspector.dagger.qualifier.ShowPadding;
+import view_inspector.dagger.qualifier.ViewFilter;
 import view_inspector.dagger.qualifier.ViewTag;
 
 @Singleton @Component(modules = ApplicationModule.class) public interface ApplicationComponent {
@@ -48,4 +50,6 @@ import view_inspector.dagger.qualifier.ViewTag;
   WindowManager provideWindowManager();
 
   @ViewTag String provideViewTag();
+
+  @ViewFilter Preference<Set<String>> provideViewFilterSet();
 }
