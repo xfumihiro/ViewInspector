@@ -20,7 +20,7 @@
   <string name="profile_result_listview_header_draw">Draw</string>
   <string name="profile_result_listview_header_profile_msec">Profile (msec)</string>
   <string name="profile_setting_dialog_prompt">Profile Samples :</string>
-  <string name="settings_menu_log_view_events">Log view events</string>
+  <string name="settings_menu_log_view_events">Log View Events</string>
   <string name="settings_menu_set_view_filter">Set View Filter</string>
 
   <!-- Profile Progressbar -->
