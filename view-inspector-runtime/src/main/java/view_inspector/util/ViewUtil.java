@@ -1,5 +1,6 @@
 package view_inspector.util;
 
+import android.content.res.Resources;
 import android.support.v7.internal.widget.ActionBarOverlayLayout;
 import android.util.Log;
 import android.view.View;
@@ -9,7 +10,11 @@ import view_inspector.ViewInspector;
 public final class ViewUtil {
 
   public static String getViewId(View view) {
-    return view.getId() > 0 ? view.getResources().getResourceName(view.getId()) : "";
+    try {
+      return view.getId() > 0 ? view.getResources().getResourceName(view.getId()) : "";
+    } catch (Resources.NotFoundException e) {
+      return "";
+    }
   }
 
   public static String getSimpleViewId(View view) {
