@@ -50,7 +50,7 @@ android.libraryVariants.all { variant ->
 }
 
 dependencies {
-  compile 'com.github.xfumihiro.view-inspector:view-inspector-runtime:0.1.5-SNAPSHOT'
+  compile 'com.github.xfumihiro.view-inspector:view-inspector-runtime:0.2.0-SNAPSHOT'
   compile 'com.android.support:appcompat-v7:23.1.0'
   compile 'com.f2prateek.rx.preferences:rx-preferences:1.0.0'
   compile 'org.aspectj:aspectjrt:1.8.6'

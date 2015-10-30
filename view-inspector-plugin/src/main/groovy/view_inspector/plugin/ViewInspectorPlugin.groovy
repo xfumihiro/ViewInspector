@@ -19,7 +19,7 @@ class ViewInspectorPlugin implements Plugin<Project> {
     }
 
     project.dependencies {
-      debugCompile 'com.github.xfumihiro.view-inspector:view-inspector-runtime:0.1.5-SNAPSHOT'
+      debugCompile 'com.github.xfumihiro.view-inspector:view-inspector-runtime:0.2.0-SNAPSHOT'
       debugCompile 'org.aspectj:aspectjrt:1.8.6'
       debugCompile('com.google.dexmaker:dexmaker:1.1') {
         transitive = true
@@ -107,11 +107,11 @@ class ViewInspectorPlugin implements Plugin<Project> {
         if (project.android.compileSdkVersion == 'android-23') {
           project.dependencies
               .add('debugCompile', project.dependencies.create(
-              'com.github.xfumihiro.view-inspector:view-inspector-aspect-v23:0.1.5-SNAPSHOT'))
+              'com.github.xfumihiro.view-inspector:view-inspector-aspect-v23:0.2.0-SNAPSHOT'))
         } else {
           project.dependencies
               .add('debugCompile', project.dependencies.create(
-              'com.github.xfumihiro.view-inspector:view-inspector-aspect:0.1.5-SNAPSHOT'))
+              'com.github.xfumihiro.view-inspector:view-inspector-aspect:0.2.0-SNAPSHOT'))
         }
       }
 

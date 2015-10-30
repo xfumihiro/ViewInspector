@@ -19,6 +19,10 @@ configure(subprojects.findAll { it.name != 'sample' }) {
     }
   }
 
+  configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+  }
+
   group = GROUP
   version = VERSION_NAME
 }
