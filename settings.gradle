@@ -1,1 +1,5 @@
-include ':sample', ':view-inspector-plugin', ':view-inspector-runtime'
+include ':sample'
+include ':view-inspector-plugin'
+include ':view-inspector-runtime'
+include ':view-inspector-aspect'
+include ':view-inspector-aspect-v23'
