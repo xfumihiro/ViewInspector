@@ -1,0 +1,43 @@
+apply plugin: 'maven-publish'
+apply plugin: 'com.jfrog.bintray'
+
+publishing {
+  publications {
+    aspectAar(MavenPublication) {
+      groupId GROUP
+      artifactId ASPECT_V23_ARTIFACT_ID
+      version VERSION_NAME
+      artifact "${project.buildDir}/outputs/aar/${project.name}-debug.aar"
+      pom.withXml {
+        asNode().appendNode('description', POM_DESCRIPTION)
+        asNode().children().last() + rootProject.ext.pomConfig
+      }
+    }
+  }
+  repositories {
+    maven {
+      credentials {
+        username project.hasProperty('NEXUS_USERNAME') ? NEXUS_USERNAME : null
+        password project.hasProperty('NEXUS_PASSWORD') ? NEXUS_PASSWORD : null
+      }
+      url version.endsWith('SNAPSHOT') ? SNAPSHOT_REPOSITORY_URL : RELEASE_REPOSITORY_URL
+    }
+  }
+}
+
+bintray {
+  user = project.hasProperty('BINTRAY_USERNAME') ? BINTRAY_USERNAME : null
+  key = project.hasProperty('BINTRAY_API_KEY') ? BINTRAY_API_KEY : null
+  publications = ['aspectAar']
+  pkg {
+    name = BINTRAY_PKG_NAME
+    repo = 'maven'
+    version {
+      name = VERSION_NAME
+      gpg {
+        sign = true
+        passphrase = project.hasProperty('BINTRAY_GPG_PASSPHRASE') ? BINTRAY_GPG_PASSPHRASE : null
+      }
+    }
+  }
+}

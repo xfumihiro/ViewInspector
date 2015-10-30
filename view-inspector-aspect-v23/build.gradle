@@ -1,0 +1,63 @@
+import org.aspectj.bridge.IMessage
+import org.aspectj.bridge.MessageHandler
+import org.aspectj.tools.ajc.Main
+
+apply plugin: 'com.android.library'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+  compileSdkVersion 23
+  buildToolsVersion rootProject.ext.buildToolsVersion
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_7
+    targetCompatibility JavaVersion.VERSION_1_7
+  }
+}
+
+android.libraryVariants.all { variant ->
+  JavaCompile javaCompile = variant.javaCompile
+  javaCompile.doLast {
+    String[] args = ["-showWeaveInfo",
+                     "-1.5",
+                     "-inpath", javaCompile.destinationDir.toString(),
+                     "-aspectpath", javaCompile.classpath.asPath,
+                     "-d", javaCompile.destinationDir.toString(),
+                     "-classpath", javaCompile.classpath.asPath,
+                     "-bootclasspath", android.bootClasspath.join(File.pathSeparator)]
+
+    MessageHandler handler = new MessageHandler(true);
+    new Main().run(args, handler)
+
+    def log = project.logger
+    for (IMessage message : handler.getMessages(null, true)) {
+      switch (message.getKind()) {
+        case IMessage.ABORT:
+        case IMessage.ERROR:
+        case IMessage.FAIL:
+          log.error message.message, message.thrown
+          break;
+        case IMessage.WARNING:
+        case IMessage.INFO:
+          log.info message.message, message.thrown
+          break;
+        case IMessage.DEBUG:
+          log.debug message.message, message.thrown
+          break;
+      }
+    }
+  }
+}
+
+dependencies {
+  compile 'com.github.xfumihiro.view-inspector:view-inspector-runtime:0.1.5-SNAPSHOT'
+  compile 'com.android.support:appcompat-v7:23.1.0'
+  compile 'com.f2prateek.rx.preferences:rx-preferences:1.0.0'
+  compile 'org.aspectj:aspectjrt:1.8.6'
+  apt 'com.google.dagger:dagger-compiler:2.0.1'
+  compile 'com.google.dagger:dagger:2.0.1'
+  provided 'org.glassfish:javax.annotation:10.0-b28'
+  compile 'com.jakewharton.scalpel:scalpel:1.1.2'
+}
+
+apply from: 'publish.gradle'
