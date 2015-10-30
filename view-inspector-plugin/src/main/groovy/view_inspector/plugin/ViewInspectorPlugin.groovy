@@ -17,6 +17,7 @@ class ViewInspectorPlugin implements Plugin<Project> {
     }
 
     project.dependencies {
+      debugCompile 'com.github.xfumihiro.view-inspector:view-inspector-aspect:0.1.5-SNAPSHOT'
       debugCompile 'com.github.xfumihiro.view-inspector:view-inspector-runtime:0.1.5-SNAPSHOT'
       debugCompile 'org.aspectj:aspectjrt:1.8.6'
       debugCompile('com.google.dexmaker:dexmaker:1.1') {

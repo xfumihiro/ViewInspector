@@ -1,6 +1,7 @@
 package view_inspector.dagger;
 
 import dagger.Component;
+import view_inspector.ViewInspector;
 import view_inspector.dagger.scope.PerActivity;
 import view_inspector.probe.ViewInspectorInterceptor;
 import view_inspector.ui.ViewInspectorToolbar;
@@ -16,11 +17,11 @@ import view_inspector.ui.menu.BoundaryMenu;
 import view_inspector.ui.menu.EventMenu;
 import view_inspector.ui.menu.LayerMenu;
 import view_inspector.ui.menu.SettingsMenu;
-import view_inspector.weaving.ViewInspectorAspect;
 
 @PerActivity @Component(dependencies = ApplicationComponent.class, modules = ActivityModule.class)
 public interface ActivityComponent {
-  void inject(ViewInspectorAspect viewInspectorAspect);
+
+  void inject(ViewInspector viewInspector);
 
   void inject(ViewInspectorInterceptor viewInspectorInterceptor);
 
