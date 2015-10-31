@@ -2,7 +2,6 @@ package view_inspector.util;
 
 import android.content.res.Resources;
 import android.support.v7.internal.widget.ActionBarOverlayLayout;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewParent;
 import view_inspector.ViewInspector;
