@@ -22,7 +22,6 @@ import android.graphics.Canvas;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import com.f2prateek.rx.preferences.Preference;
 import java.util.List;
 import java.util.Set;
@@ -267,11 +266,19 @@ import view_inspector.util.ViewUtil;
 
   private void insertScalpelLayout(View view) {
     ViewGroup viewParent = (ViewGroup) view.getParent();
-    viewParent.removeView(view);
-    viewParent.addView(scalpelLayout,
-        new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-            FrameLayout.LayoutParams.MATCH_PARENT));
-    scalpelLayout.addView(view);
+    ViewGroup.LayoutParams layoutParams =
+        new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT);
+    if (ViewUtil.isActionBarOverlayLayout(viewParent)) {
+      View viewChild = ((ViewGroup) view).getChildAt(0);
+      ((ViewGroup) view).removeView(viewChild);
+      ((ViewGroup) view).addView(scalpelLayout, layoutParams);
+      scalpelLayout.addView(viewChild);
+    } else {
+      viewParent.removeView(view);
+      viewParent.addView(scalpelLayout, layoutParams);
+      scalpelLayout.addView(view);
+    }
     ViewInspector.viewRoot = view;
   }
 
