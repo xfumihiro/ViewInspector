@@ -41,7 +41,7 @@ import static android.view.WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
   public static WindowManager.LayoutParams createLayoutParams(Context context) {
     Resources res = context.getResources();
     mLayoutHeight = res.getDimensionPixelSize(R.dimen.toolbar_height);
-    if (Build.VERSION.SDK_INT > 22) { // LOLLIPOP_MR1
+    if (Build.VERSION.SDK_INT == 23) { // MARSHMALLOW
       mLayoutHeight = res.getDimensionPixelSize(R.dimen.toolbar_height_m);
     }
 
