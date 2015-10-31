@@ -55,6 +55,10 @@ public final class ViewUtil {
     return view.equals(ViewInspector.viewRoot);
   }
 
+  public static boolean isActionBarOverlayLayout(View view) {
+    return view.getClass().getName().equals("com.android.internal.widget.ActionBarOverlayLayout");
+  }
+
   private static boolean isAndroidInternalViewClass(View view) {
     String viewClassName = view.getClass().getName();
     return viewClassName.startsWith("android.support.v7.internal") || viewClassName.startsWith(
