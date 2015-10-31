@@ -45,7 +45,7 @@ public final class ViewUtil {
   }
 
   public static boolean isNotSupportedViewClass(View view) {
-    return view instanceof ActionBarOverlayLayout;
+    return view instanceof ActionBarOverlayLayout || isAndroidInternalViewClass(view);
   }
 
   public static boolean isLevelTwoView(View view) {
@@ -54,6 +54,12 @@ public final class ViewUtil {
 
   public static boolean isViewRoot(View view) {
     return view.equals(ViewInspector.viewRoot);
+  }
+
+  private static boolean isAndroidInternalViewClass(View view) {
+    String viewClassName = view.getClass().getName();
+    return viewClassName.startsWith("android.support.v7.internal") || viewClassName.startsWith(
+        "com.android.internal");
   }
 
   private ViewUtil() {
