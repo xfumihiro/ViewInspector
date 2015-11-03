@@ -51,13 +51,21 @@ android.libraryVariants.all { variant ->
 
 dependencies {
   compile 'com.github.xfumihiro.view-inspector:view-inspector-runtime:0.2.0-SNAPSHOT'
-  compile 'com.android.support:appcompat-v7:23.1.0'
-  compile 'com.f2prateek.rx.preferences:rx-preferences:1.0.0'
-  compile 'org.aspectj:aspectjrt:1.8.6'
-  apt 'com.google.dagger:dagger-compiler:2.0.1'
-  compile 'com.google.dagger:dagger:2.0.1'
-  provided 'org.glassfish:javax.annotation:10.0-b28'
-  compile 'com.jakewharton.scalpel:scalpel:1.1.2'
+
+  // Android dependencies
+  compile rootProject.ext.appcompatV72310
+
+  // AspectJ dependencies
+  compile rootProject.ext.aspectjRuntime
+
+  // Dagger dependencies
+  compile rootProject.ext.dagger
+  apt rootProject.ext.daggerCompiler
+  provided rootProject.ext.javaxAnnotation
+
+  // Third-party dependencies
+  compile rootProject.ext.scalpel
+  compile rootProject.ext.rxPreference
 }
 
 apply from: 'publish.gradle'

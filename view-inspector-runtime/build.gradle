@@ -12,20 +12,20 @@ android {
 }
 
 dependencies {
-  compile 'com.google.dexmaker:dexmaker:1.1'
+  // Android dependencies
+  compile rootProject.ext.appcompatV72103
 
-  apt 'com.google.dagger:dagger-compiler:2.0.1'
-  compile 'com.google.dagger:dagger:2.0.1'
-  provided 'org.glassfish:javax.annotation:10.0-b28'
+  // Dagger dependencies
+  compile rootProject.ext.dagger
+  apt rootProject.ext.daggerCompiler
+  provided rootProject.ext.javaxAnnotation
 
-  compile 'com.f2prateek.rx.preferences:rx-preferences:1.0.0'
-
-  compile 'com.github.frankiesardo:auto-parcel:0.3'
-  apt 'com.github.frankiesardo:auto-parcel-processor:0.3'
-
-  compile 'com.jakewharton.scalpel:scalpel:1.1.2'
-
-  compile 'com.android.support:appcompat-v7:21.0.3'
+  // Third-party dependencies
+  compile rootProject.ext.dexmaker
+  compile rootProject.ext.scalpel
+  compile rootProject.ext.rxPreference
+  compile rootProject.ext.autoParcel
+  apt rootProject.ext.autoParcelProcessor
 }
 
 apply from: 'publish.gradle'
