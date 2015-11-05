@@ -1,4 +1,5 @@
 /*
+ * Copyright (C) 2015 Fumihiro Xue
  * Copyright (C) 2014 Lucas Rocha
  *
  * This code is based on bits and pieces of DexMaker's ProxyBuilder.
@@ -22,6 +23,7 @@ package view_inspector.probe;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.util.Log;
 import android.view.View;
 import com.google.dexmaker.Code;
 import com.google.dexmaker.Comparison;
@@ -32,7 +34,10 @@ import com.google.dexmaker.Local;
 import com.google.dexmaker.MethodId;
 import com.google.dexmaker.TypeId;
 import java.io.IOException;
+import java.lang.reflect.Method;
+import view_inspector.ViewInspector;
 
+import static java.lang.reflect.Modifier.FINAL;
 import static java.lang.reflect.Modifier.PRIVATE;
 import static java.lang.reflect.Modifier.PUBLIC;
 import static view_inspector.probe.ViewProxyBuilder.CONSTRUCTOR_ARG_TYPES;
@@ -449,7 +454,19 @@ final class DexProxyBuilder {
     generateConstructorAndFields(dexMaker, generatedType, baseType);
     generateOnMeasureMethod(dexMaker, generatedType, baseType);
     generateOnLayoutMethod(dexMaker, generatedType, baseType);
-    generateDrawMethods(dexMaker, generatedType, baseType);
+
+    try {
+      Method drawMethod = baseClass.getMethod("draw", Canvas.class);
+      if ((drawMethod.getModifiers() & FINAL) == 0) {
+        generateDrawMethods(dexMaker, generatedType, baseType);
+      } else {
+        Log.d(ViewInspector.TAG,
+            "DexProxyBuilder > draw method is final, skipped generateDrawMethods.");
+      }
+    } catch (NoSuchMethodException e) {
+      e.printStackTrace();
+    }
+
     generateRequestLayoutMethod(dexMaker, generatedType, baseType);
     generateForceLayoutMethod(dexMaker, generatedType, baseType);
     generateSetMeasuredDimension(dexMaker, generatedType, baseType);
