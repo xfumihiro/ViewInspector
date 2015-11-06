@@ -22,21 +22,21 @@ class ViewInspectorPlugin implements Plugin<Project> {
       debugCompile 'com.github.xfumihiro.view-inspector:view-inspector-runtime:0.2.0-SNAPSHOT'
 
       // Android dependencies
-      debugCompile project.rootProject.ext.appcompatV72103
+      debugCompile 'com.android.support:appcompat-v7:21.0.3'
 
       // AspectJ dependencies
-      debugCompile project.rootProject.ext.aspectjRuntime
+      debugCompile 'org.aspectj:aspectjrt:1.8.6'
 
       // Dagger dependencies
-      debugCompile project.rootProject.ext.dagger
+      debugCompile 'com.google.dagger:dagger:2.0.1'
 
       // Third-party dependencies
-      debugCompile(project.rootProject.ext.dexmaker) {
+      debugCompile('com.google.dexmaker:dexmaker:1.1') {
         transitive = true
       }
-      debugCompile project.rootProject.ext.scalpel
-      debugCompile project.rootProject.ext.rxPreference
-      debugCompile project.rootProject.ext.autoParcel
+      debugCompile 'com.jakewharton.scalpel:scalpel:1.1.2'
+      debugCompile 'com.f2prateek.rx.preferences:rx-preferences:1.0.0'
+      debugCompile 'com.github.frankiesardo:auto-parcel:0.3'
     }
 
     project.extensions.create("viewInspector", ViewInspectorPluginExtension)
