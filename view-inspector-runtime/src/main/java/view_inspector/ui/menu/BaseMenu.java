@@ -3,6 +3,7 @@ package view_inspector.ui.menu;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.res.Resources;
+import android.os.Build;
 import android.view.Gravity;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
@@ -33,6 +34,9 @@ public class BaseMenu extends LinearLayout {
             FLAG_NOT_FOCUSABLE | FLAG_NOT_TOUCH_MODAL | FLAG_LAYOUT_NO_LIMITS
                 | FLAG_LAYOUT_INSET_DECOR | FLAG_LAYOUT_IN_SCREEN, TRANSLUCENT);
     params.y = res.getDimensionPixelSize(R.dimen.toolbar_height);
+    if (Build.VERSION.SDK_INT == 23) { // MARSHMALLOW
+      params.y = res.getDimensionPixelSize(R.dimen.toolbar_height_m);
+    }
     params.gravity = Gravity.TOP | Gravity.RIGHT;
 
     return params;
