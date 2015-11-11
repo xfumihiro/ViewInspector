@@ -31,7 +31,7 @@ import static android.view.WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
 
   @Inject public ProfileProgressbar(Context context) {
     super(context);
-    inflate(context, R.layout.progressbar, this);
+    inflate(context, R.layout.view_inspector_progressbar, this);
     mProgressbar = (ProgressBar) findViewById(R.id.progressbar);
     mProgressbar.setIndeterminate(false);
     mProgressbar.setMax(100);

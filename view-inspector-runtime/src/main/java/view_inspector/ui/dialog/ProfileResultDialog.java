@@ -23,7 +23,7 @@ public class ProfileResultDialog extends BaseDialog {
 
     mContext = context;
 
-    setView(View.inflate(context, R.layout.profile_result, null));
+    setView(View.inflate(context, R.layout.view_inspector_profile_result, null));
 
     setTitle(samples > 1 ? "Profile Results (" + samples + " samples)" : "Profile Results");
 

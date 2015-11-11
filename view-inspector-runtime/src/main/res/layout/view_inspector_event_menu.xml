@@ -5,7 +5,7 @@
       android:orientation="vertical"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:background="@color/layer_menu_background"
+      android:background="@color/event_menu_background"
       >
     <LinearLayout
         android:tag="@string/view_tag"
@@ -15,12 +15,12 @@
         >
       <TextView
           android:tag="@string/view_tag"
-          android:text="@string/layer_menu_scalpel_3d"
+          android:text="@string/event_menu_probe_measures"
           style="@style/MenuTextView"
           />
       <Switch
           android:tag="@string/view_tag"
-          android:id="@+id/scalpel_3d_switch"
+          android:id="@+id/probe_measure_switch"
           style="@style/MenuSwitch"
           />
     </LinearLayout>
@@ -32,7 +32,21 @@
         android:orientation="vertical"
         android:visibility="gone"
         >
-      <include layout="@layout/menu_separator"/>
+      <include layout="@layout/view_inspector_menu_separator"/>
+      <LinearLayout
+          android:tag="@string/view_tag"
+          android:id="@+id/view_root_layout"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/menu_item_height"
+          android:orientation="horizontal"
+          >
+        <TextView
+            android:tag="@string/view_tag"
+            android:text="@string/event_menu_set_view_root"
+            style="@style/MenuTextView"
+            />
+      </LinearLayout>
+      <include layout="@layout/view_inspector_menu_separator"/>
       <LinearLayout
           android:tag="@string/view_tag"
           android:layout_width="match_parent"
@@ -41,33 +55,29 @@
           >
         <TextView
             android:tag="@string/view_tag"
-            android:text="@string/layer_menu_wireframe_only"
+            android:text="@string/event_menu_show_measures"
             style="@style/MenuTextView"
             />
         <Switch
             android:tag="@string/view_tag"
-            android:id="@+id/scalpel_wireframe_switch"
+            android:id="@+id/show_measure_count"
             style="@style/MenuSwitch"
             />
       </LinearLayout>
-      <include layout="@layout/menu_separator"/>
-      <LinearLayout
+    </LinearLayout>
+    <include layout="@layout/view_inspector_menu_separator"/>
+    <LinearLayout
+        android:tag="@string/view_tag"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_item_height"
+        android:orientation="horizontal"
+        >
+      <TextView
           android:tag="@string/view_tag"
-          android:layout_width="match_parent"
-          android:layout_height="@dimen/menu_item_height"
-          android:orientation="horizontal"
-          >
-        <TextView
-            android:tag="@string/view_tag"
-            android:text="@string/layer_menu_show_view_id"
-            style="@style/MenuTextView"
-            />
-        <Switch
-            android:tag="@string/view_tag"
-            android:id="@+id/scalpel_id_switch"
-            style="@style/MenuSwitch"
-            />
-      </LinearLayout>
+          android:id="@+id/profile_view_tree"
+          android:text="@string/event_menu_profile_view_tree"
+          style="@style/MenuTextView"
+          />
     </LinearLayout>
   </LinearLayout>
 </merge>

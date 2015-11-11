@@ -51,7 +51,8 @@ public class ViewRootAdapter extends BaseAdapter {
   @Override public View getView(final int position, View convertView, ViewGroup parent) {
     ViewHolder viewHolder;
     if (convertView == null) {
-      convertView = mLayoutInflater.inflate(R.layout.set_view_root_listitem, parent, false);
+      convertView =
+          mLayoutInflater.inflate(R.layout.view_inspector_set_view_root_listitem, parent, false);
       viewHolder = new ViewHolder();
       viewHolder.viewClass = (TextView) convertView.findViewById(R.id.view_class);
       viewHolder.viewId = (TextView) convertView.findViewById(R.id.view_id);
