@@ -36,7 +36,7 @@ public class EventMenu extends BaseMenu implements SetViewRootDialog.ViewRootSel
     ViewInspector.runtimeComponentMap.get(context).inject(this);
 
     mContext = context;
-    inflate(context, R.layout.event_menu, this);
+    inflate(context, R.layout.view_inspector_event_menu, this);
 
     mSubmenuLayout = (LinearLayout) findViewById(R.id.submenu);
     if (probeMeasures.get()) {

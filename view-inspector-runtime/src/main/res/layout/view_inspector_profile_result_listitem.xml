@@ -6,7 +6,7 @@
     android:gravity="center"
     >
 
-  <include layout="@layout/view_subspect"/>
+  <include layout="@layout/view_inspector_view_subspect"/>
 
   <TextView
       android:id="@+id/column1"

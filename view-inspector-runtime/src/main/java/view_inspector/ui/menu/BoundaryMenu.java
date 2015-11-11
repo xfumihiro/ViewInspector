@@ -20,7 +20,7 @@ public class BoundaryMenu extends BaseMenu {
     super(context);
     ViewInspector.runtimeComponentMap.get(context).inject(this);
 
-    inflate(context, R.layout.boundary_menu, this);
+    inflate(context, R.layout.view_inspector_boundary_menu, this);
 
     Switch outlineSwitch = (Switch) findViewById(R.id.outline_switch);
     outlineSwitch.setChecked(showOutline.get());

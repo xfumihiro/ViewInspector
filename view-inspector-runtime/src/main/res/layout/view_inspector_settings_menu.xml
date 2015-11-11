@@ -5,7 +5,7 @@
       android:orientation="vertical"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:background="@color/boundary_menu_background"
+      android:background="@color/settings_menu_background"
       >
     <LinearLayout
         android:tag="@string/view_tag"
@@ -15,16 +15,16 @@
         >
       <TextView
           android:tag="@string/view_tag"
-          android:text="@string/boundary_menu_show_outline"
+          android:text="@string/settings_menu_log_view_events"
           style="@style/MenuTextView"
           />
       <Switch
           android:tag="@string/view_tag"
-          android:id="@+id/outline_switch"
+          android:id="@+id/log_view_events_switch"
           style="@style/MenuSwitch"
           />
     </LinearLayout>
-    <include layout="@layout/menu_separator"/>
+    <include layout="@layout/view_inspector_menu_separator"/>
     <LinearLayout
         android:tag="@string/view_tag"
         android:layout_width="match_parent"
@@ -33,31 +33,9 @@
         >
       <TextView
           android:tag="@string/view_tag"
-          android:text="@string/boundary_menu_show_margin"
+          android:id="@+id/view_filter"
+          android:text="@string/settings_menu_set_view_filter"
           style="@style/MenuTextView"
-          />
-      <Switch
-          android:tag="@string/view_tag"
-          android:id="@+id/margin_switch"
-          style="@style/MenuSwitch"
-          />
-    </LinearLayout>
-    <include layout="@layout/menu_separator"/>
-    <LinearLayout
-        android:tag="@string/view_tag"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/menu_item_height"
-        android:orientation="horizontal"
-        >
-      <TextView
-          android:tag="@string/view_tag"
-          android:text="@string/boundary_menu_show_padding"
-          style="@style/MenuTextView"
-          />
-      <Switch
-          android:tag="@string/view_tag"
-          android:id="@+id/padding_switch"
-          style="@style/MenuSwitch"
           />
     </LinearLayout>
   </LinearLayout>

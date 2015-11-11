@@ -24,7 +24,7 @@ public class LayerMenu extends BaseMenu {
     super(context);
     ViewInspector.runtimeComponentMap.get(context).inject(this);
 
-    inflate(context, R.layout.layer_menu, this);
+    inflate(context, R.layout.view_inspector_layer_menu, this);
 
     mSubmenuLayout = (LinearLayout) findViewById(R.id.submenu);
     if (scalpel3d.get()) {

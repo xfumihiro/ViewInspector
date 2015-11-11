@@ -13,7 +13,7 @@
         android:id="@+id/header"
         android:layout_width="@dimen/toolbar_header_width"
         android:layout_height="match_parent"
-        android:background="@drawable/toolbar_header"
+        android:background="@drawable/view_inspector_toolbar_header"
         />
     <ImageButton
         android:tag="@string/view_tag"

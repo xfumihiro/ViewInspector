@@ -24,7 +24,7 @@ public class SettingsMenu extends BaseMenu {
     super(context);
     ViewInspector.runtimeComponentMap.get(context).inject(this);
 
-    inflate(context, R.layout.settings_menu, this);
+    inflate(context, R.layout.view_inspector_settings_menu, this);
 
     Switch logViewEventsSwitch = (Switch) findViewById(R.id.log_view_events_switch);
     logViewEventsSwitch.setChecked(logViewEvents.get());

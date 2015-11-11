@@ -58,7 +58,8 @@ public class ProfileResultAdapter extends BaseAdapter {
   @Override public View getView(int position, View convertView, ViewGroup parent) {
     ViewHolder viewHolder;
     if (convertView == null) {
-      convertView = mLayoutInflater.inflate(R.layout.profile_result_listitem, parent, false);
+      convertView =
+          mLayoutInflater.inflate(R.layout.view_inspector_profile_result_listitem, parent, false);
       viewHolder = new ViewHolder();
       viewHolder.viewClass = (TextView) convertView.findViewById(R.id.view_class);
       viewHolder.viewId = (TextView) convertView.findViewById(R.id.view_id);

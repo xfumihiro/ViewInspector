@@ -74,7 +74,8 @@ public class ViewFilterAdapter extends BaseAdapter {
   @Override public View getView(final int position, View convertView, ViewGroup parent) {
     ViewHolder viewHolder;
     if (convertView == null) {
-      convertView = mLayoutInflater.inflate(R.layout.set_view_filter_listitem, parent, false);
+      convertView =
+          mLayoutInflater.inflate(R.layout.view_inspector_set_view_filter_listitem, parent, false);
       viewHolder = new ViewHolder();
       viewHolder.text1 = (CheckedTextView) convertView.findViewById(R.id.text1);
       convertView.setTag(viewHolder);

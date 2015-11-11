@@ -12,19 +12,19 @@ public class CheckableLinearLayout extends LinearLayout implements Checkable {
 
   public CheckableLinearLayout(Context context) {
     super(context);
-    inflate(context, R.layout.checkable_linear_layout, this);
+    inflate(context, R.layout.view_inspector_checkable_linear_layout, this);
     this.mCheckedTextView = (CheckedTextView) findViewById(R.id.checked_textview);
   }
 
   public CheckableLinearLayout(Context context, AttributeSet attrs) {
     super(context, attrs);
-    inflate(context, R.layout.checkable_linear_layout, this);
+    inflate(context, R.layout.view_inspector_checkable_linear_layout, this);
     this.mCheckedTextView = (CheckedTextView) findViewById(R.id.checked_textview);
   }
 
   public CheckableLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
-    inflate(context, R.layout.checkable_linear_layout, this);
+    inflate(context, R.layout.view_inspector_checkable_linear_layout, this);
 
     this.mCheckedTextView = (CheckedTextView) findViewById(R.id.checked_textview);
   }

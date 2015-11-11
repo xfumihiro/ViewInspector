@@ -29,7 +29,7 @@ public class ProfileSettingDialog extends BaseDialog {
 
     setTitle("Profile Setting");
 
-    setView(View.inflate(context, R.layout.profile_setting, null));
+    setView(View.inflate(context, R.layout.view_inspector_profile_setting, null));
 
     setButton(BUTTON_NEGATIVE, "Cancel", new OnClickListener() {
       @Override public void onClick(DialogInterface dialog, int which) {
