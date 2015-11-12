@@ -53,7 +53,7 @@ viewInspector {
 }
 ```
 
-Snapshots of the development version are available in [Sonatype's `snapshots` repository][snap].
+[SNAPSHOTS][snap] of the development version. [[usage][snap_sample]]
 
 Inspirations & Dependencies
 ---------------------------
@@ -89,4 +89,5 @@ License
     See the License for the specific language governing permissions and
     limitations under the License.
 
-[snap]: https://oss.sonatype.org/content/repositories/snapshots/
+[snap]: https://oss.sonatype.org/content/repositories/snapshots/com/github/xfumihiro/view-inspector/view-inspector-plugin/
+[snap_sample]:https://github.com/xfumihiro/ViewInspector/blob/master/sample/build.gradle
