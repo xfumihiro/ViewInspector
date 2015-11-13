@@ -105,6 +105,11 @@ class ViewInspectorPlugin implements Plugin<Project> {
       task.dependsOn variant.mergeResources
       variant.javaCompile.source sourcePath
       variant.javaCompile.dependsOn task
+
+      // Create resValue if excludePackages is set
+      if (project.viewInspector.excludePackages) {
+        variant.resValue "string-array", "excludePackages", "${project.viewInspector.excludePackages}"
+      }
     }
 
     // Add view-inspector-aspect library dependency according to the compileSdkVersion
