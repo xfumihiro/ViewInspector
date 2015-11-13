@@ -69,7 +69,8 @@ class LayoutResourceParser {
         name == "requestLayout" ||
         name == "DateTimeView" ||
         name == "Space" ||
-        name == "requestFocus") {
+        name == "requestFocus" ||
+        name == "TextureView") {
       className = null
     } else if (name.indexOf('.') == -1) {
       className = "android.widget.${name}"

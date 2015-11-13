@@ -24,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import java.io.IOException;
 import java.lang.reflect.Modifier;
+import view_inspector.R;
 import view_inspector.ViewInspector;
 
 import static view_inspector.probe.ViewClassUtil.findViewClass;
@@ -62,6 +63,10 @@ class ProbeViewFactory implements LayoutInflater.Factory2 {
         return null;
       }
 
+      if (isExcluded(viewClass.getName())) {
+        return null;
+      }
+
       return ViewProxyBuilder.forClass(context, viewClass)
           .constructorArgValues(mContext, attrs)
           .interceptor(mProbe.getInterceptor())
@@ -93,6 +98,14 @@ class ProbeViewFactory implements LayoutInflater.Factory2 {
     }
 
     return null;
+  }
+
+  private boolean isExcluded(String viewName) {
+    String[] excludePackages = mContext.getResources().getStringArray(R.array.excludePackages);
+    for (String excludePackage : excludePackages) {
+      if (viewName.startsWith(excludePackage)) return true;
+    }
+    return false;
   }
 
   @Override public View onCreateView(String name, Context context, AttributeSet attrs) {

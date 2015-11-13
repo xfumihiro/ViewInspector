@@ -26,4 +26,9 @@
   <!-- Profile Progressbar -->
   <string name="profile_progressbar_prompt">Profiling View Tree</string>
   <string name="profile_progressbar_percentage_mark">%</string>
+
+  <!-- Exclude Packages-->
+  <string-array name="excludePackages">
+    <!-- defined by excludePackages option -->
+  </string-array>
 </resources>
