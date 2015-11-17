@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
   <LinearLayout
-      android:tag="@string/view_tag"
+      android:tag="@string/view_inspector_view_tag"
       android:id="@+id/progressbar_layout"
       android:orientation="horizontal"
       android:layout_width="match_parent"
@@ -9,42 +9,42 @@
       android:background="@color/progressbar_background"
       >
     <TextView
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="@string/profile_progressbar_prompt"
+        android:text="@string/view_inspector_profile_progressbar_prompt"
         android:textColor="@color/progressbar_prompt_color"
         android:gravity="center"
-        android:paddingLeft="@dimen/profile_progressbar_prompt_padding_left"
-        android:paddingRight="@dimen/profile_progressbar_prompt_padding_right"
+        android:paddingLeft="@dimen/view_inspector_profile_progressbar_prompt_padding_left"
+        android:paddingRight="@dimen/view_inspector_profile_progressbar_prompt_padding_right"
         />
     <ProgressBar
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:id="@+id/progressbar"
         android:layout_width="0dp"
         android:layout_weight="1"
-        android:layout_height="@dimen/profile_progressbar_widget_height"
+        android:layout_height="@dimen/view_inspector_profile_progressbar_widget_height"
         android:layout_gravity="center"
         android:indeterminate="false"
         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
         />
     <TextView
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:id="@+id/percentage"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:paddingLeft="@dimen/profile_progressbar_percentage_padding_left"
+        android:paddingLeft="@dimen/view_inspector_profile_progressbar_percentage_padding_left"
         android:textColor="@color/progressbar_text_color"
         android:gravity="center"
         />
     <TextView
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="@string/profile_progressbar_percentage_mark"
+        android:text="@string/view_inspector_profile_progressbar_percentage_mark"
         android:textColor="@color/progressbar_text_color"
         android:gravity="center"
-        android:paddingRight="@dimen/profile_progressbar_percentage_mark_padding_right"
+        android:paddingRight="@dimen/view_inspector_profile_progressbar_percentage_mark_padding_right"
         />
   </LinearLayout>
 </merge>

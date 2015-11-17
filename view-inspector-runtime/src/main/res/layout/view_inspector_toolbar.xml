@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
   <LinearLayout
-      android:tag="@string/view_tag"
+      android:tag="@string/view_inspector_view_tag"
       android:id="@+id/toolbar"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
@@ -9,48 +9,48 @@
       android:orientation="horizontal"
       >
     <ImageView
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:id="@+id/header"
-        android:layout_width="@dimen/toolbar_header_width"
+        android:layout_width="@dimen/view_inspector_toolbar_header_width"
         android:layout_height="match_parent"
         android:background="@drawable/view_inspector_toolbar_header"
         />
     <ImageButton
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:id="@+id/toggle_menu"
-        android:layout_width="@dimen/toolbar_icon_width"
+        android:layout_width="@dimen/view_inspector_toolbar_icon_width"
         android:layout_height="match_parent"
         android:src="@drawable/ic_chevron_left_white_24dp"
         android:background="@color/toggle_background"
         />
     <ImageButton
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:id="@+id/outline_menu"
-        android:layout_width="@dimen/toolbar_icon_width"
+        android:layout_width="@dimen/view_inspector_toolbar_icon_width"
         android:layout_height="match_parent"
         android:src="@drawable/ic_fullscreen_white_24dp"
         android:background="@color/boundary_background"
         />
     <ImageButton
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:id="@+id/layer_menu"
-        android:layout_width="@dimen/toolbar_icon_width"
+        android:layout_width="@dimen/view_inspector_toolbar_icon_width"
         android:layout_height="match_parent"
         android:src="@drawable/ic_layers_white_24dp"
         android:background="@color/layer_background"
         />
     <ImageButton
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:id="@+id/event_menu"
-        android:layout_width="@dimen/toolbar_icon_width"
+        android:layout_width="@dimen/view_inspector_toolbar_icon_width"
         android:layout_height="match_parent"
         android:src="@drawable/ic_timer_white_24dp"
         android:background="@color/event_background"
         />
     <ImageButton
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:id="@+id/settings_menu"
-        android:layout_width="@dimen/toolbar_icon_width"
+        android:layout_width="@dimen/view_inspector_toolbar_icon_width"
         android:layout_height="match_parent"
         android:src="@drawable/ic_settings_white_24dp"
         android:background="@color/settings_background"

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
   <LinearLayout
-      android:tag="@string/view_tag"
+      android:tag="@string/view_inspector_view_tag"
       android:orientation="vertical"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:background="@color/layer_menu_background"
       >
     <LinearLayout
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/menu_item_height"
+        android:layout_height="@dimen/view_inspector_menu_item_height"
         android:orientation="horizontal"
         >
       <TextView
-          android:tag="@string/view_tag"
-          android:text="@string/layer_menu_scalpel_3d"
+          android:tag="@string/view_inspector_view_tag"
+          android:text="@string/view_inspector_layer_menu_scalpel_3d"
           style="@style/MenuTextView"
           />
       <Switch
-          android:tag="@string/view_tag"
+          android:tag="@string/view_inspector_view_tag"
           android:id="@+id/scalpel_3d_switch"
           style="@style/MenuSwitch"
           />
     </LinearLayout>
     <LinearLayout
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:id="@+id/submenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,36 +34,36 @@
         >
       <include layout="@layout/view_inspector_menu_separator"/>
       <LinearLayout
-          android:tag="@string/view_tag"
+          android:tag="@string/view_inspector_view_tag"
           android:layout_width="match_parent"
-          android:layout_height="@dimen/menu_item_height"
+          android:layout_height="@dimen/view_inspector_menu_item_height"
           android:orientation="horizontal"
           >
         <TextView
-            android:tag="@string/view_tag"
-            android:text="@string/layer_menu_wireframe_only"
+            android:tag="@string/view_inspector_view_tag"
+            android:text="@string/view_inspector_layer_menu_wireframe_only"
             style="@style/MenuTextView"
             />
         <Switch
-            android:tag="@string/view_tag"
+            android:tag="@string/view_inspector_view_tag"
             android:id="@+id/scalpel_wireframe_switch"
             style="@style/MenuSwitch"
             />
       </LinearLayout>
       <include layout="@layout/view_inspector_menu_separator"/>
       <LinearLayout
-          android:tag="@string/view_tag"
+          android:tag="@string/view_inspector_view_tag"
           android:layout_width="match_parent"
-          android:layout_height="@dimen/menu_item_height"
+          android:layout_height="@dimen/view_inspector_menu_item_height"
           android:orientation="horizontal"
           >
         <TextView
-            android:tag="@string/view_tag"
-            android:text="@string/layer_menu_show_view_id"
+            android:tag="@string/view_inspector_view_tag"
+            android:text="@string/view_inspector_layer_menu_show_view_id"
             style="@style/MenuTextView"
             />
         <Switch
-            android:tag="@string/view_tag"
+            android:tag="@string/view_inspector_view_tag"
             android:id="@+id/scalpel_id_switch"
             style="@style/MenuSwitch"
             />

@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
   <LinearLayout
-      android:tag="@string/view_tag"
+      android:tag="@string/view_inspector_view_tag"
       android:orientation="vertical"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:background="@color/event_menu_background"
       >
     <LinearLayout
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/menu_item_height"
+        android:layout_height="@dimen/view_inspector_menu_item_height"
         android:orientation="horizontal"
         >
       <TextView
-          android:tag="@string/view_tag"
-          android:text="@string/event_menu_probe_measures"
+          android:tag="@string/view_inspector_view_tag"
+          android:text="@string/view_inspector_event_menu_probe_measures"
           style="@style/MenuTextView"
           />
       <Switch
-          android:tag="@string/view_tag"
+          android:tag="@string/view_inspector_view_tag"
           android:id="@+id/probe_measure_switch"
           style="@style/MenuSwitch"
           />
     </LinearLayout>
     <LinearLayout
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:id="@+id/submenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,32 +34,32 @@
         >
       <include layout="@layout/view_inspector_menu_separator"/>
       <LinearLayout
-          android:tag="@string/view_tag"
+          android:tag="@string/view_inspector_view_tag"
           android:id="@+id/view_root_layout"
           android:layout_width="match_parent"
-          android:layout_height="@dimen/menu_item_height"
+          android:layout_height="@dimen/view_inspector_menu_item_height"
           android:orientation="horizontal"
           >
         <TextView
-            android:tag="@string/view_tag"
-            android:text="@string/event_menu_set_view_root"
+            android:tag="@string/view_inspector_view_tag"
+            android:text="@string/view_inspector_event_menu_set_view_root"
             style="@style/MenuTextView"
             />
       </LinearLayout>
       <include layout="@layout/view_inspector_menu_separator"/>
       <LinearLayout
-          android:tag="@string/view_tag"
+          android:tag="@string/view_inspector_view_tag"
           android:layout_width="match_parent"
-          android:layout_height="@dimen/menu_item_height"
+          android:layout_height="@dimen/view_inspector_menu_item_height"
           android:orientation="horizontal"
           >
         <TextView
-            android:tag="@string/view_tag"
-            android:text="@string/event_menu_show_measures"
+            android:tag="@string/view_inspector_view_tag"
+            android:text="@string/view_inspector_event_menu_show_measures"
             style="@style/MenuTextView"
             />
         <Switch
-            android:tag="@string/view_tag"
+            android:tag="@string/view_inspector_view_tag"
             android:id="@+id/show_measure_count"
             style="@style/MenuSwitch"
             />
@@ -67,15 +67,15 @@
     </LinearLayout>
     <include layout="@layout/view_inspector_menu_separator"/>
     <LinearLayout
-        android:tag="@string/view_tag"
+        android:tag="@string/view_inspector_view_tag"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/menu_item_height"
+        android:layout_height="@dimen/view_inspector_menu_item_height"
         android:orientation="horizontal"
         >
       <TextView
-          android:tag="@string/view_tag"
+          android:tag="@string/view_inspector_view_tag"
           android:id="@+id/profile_view_tree"
-          android:text="@string/event_menu_profile_view_tree"
+          android:text="@string/view_inspector_event_menu_profile_view_tree"
           style="@style/MenuTextView"
           />
     </LinearLayout>

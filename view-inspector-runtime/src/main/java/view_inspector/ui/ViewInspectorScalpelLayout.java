@@ -11,7 +11,7 @@ import view_inspector.dagger.scope.PerActivity;
 
   @Inject public ViewInspectorScalpelLayout(Context context) {
     super(context);
-    setTag(getResources().getString(R.string.view_tag));
+    setTag(getResources().getString(R.string.view_inspector_view_tag));
   }
 
   @Override protected void onDetachedFromWindow() {

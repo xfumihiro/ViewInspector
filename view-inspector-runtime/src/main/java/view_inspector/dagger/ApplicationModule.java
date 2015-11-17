@@ -118,6 +118,6 @@ import static android.content.Context.WINDOW_SERVICE;
   }
 
   @Provides @Singleton @ViewTag String provideViewTag() {
-    return application.getResources().getString(R.string.view_tag);
+    return application.getResources().getString(R.string.view_inspector_view_tag);
   }
 }

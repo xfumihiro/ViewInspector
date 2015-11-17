@@ -3,9 +3,9 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="@dimen/material_dialog_padding_between_title_and_body_text"
-    android:paddingLeft="@dimen/material_dialog_padding_around_content_area"
-    android:paddingRight="@dimen/material_dialog_padding_around_content_area"
+    android:paddingTop="@dimen/view_inspector_material_dialog_padding_between_title_and_body_text"
+    android:paddingLeft="@dimen/view_inspector_material_dialog_padding_around_content_area"
+    android:paddingRight="@dimen/view_inspector_material_dialog_padding_around_content_area"
     >
   <LinearLayout
       android:layout_width="match_parent"
@@ -17,7 +17,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="@string/profile_result_listview_header_view"
+        android:text="@string/view_inspector_profile_result_listview_header_view"
         android:gravity="center"
         style="@style/TextAppearance.AppCompat.Caption"
         />
@@ -27,35 +27,35 @@
         >
       <TextView
           android:id="@+id/profile"
-          android:layout_width="@dimen/profile_result_col_header_profile_width"
+          android:layout_width="@dimen/view_inspector_profile_result_col_header_profile_width"
           android:layout_height="wrap_content"
-          android:text="@string/profile_result_listview_header_profile_msec"
+          android:text="@string/view_inspector_profile_result_listview_header_profile_msec"
           android:gravity="center"
           style="@style/TextAppearance.AppCompat.Caption"
           />
       <TextView
           android:id="@+id/measure"
-          android:layout_width="@dimen/profile_result_list_item_profile_width"
+          android:layout_width="@dimen/view_inspector_profile_result_list_item_profile_width"
           android:layout_height="wrap_content"
-          android:text="@string/profile_result_listview_header_measure"
+          android:text="@string/view_inspector_profile_result_listview_header_measure"
           android:gravity="center"
           android:layout_below="@+id/profile"
           style="@style/TextAppearance.AppCompat.Caption"
           />
       <TextView
           android:id="@+id/layout"
-          android:layout_width="@dimen/profile_result_list_item_profile_width"
+          android:layout_width="@dimen/view_inspector_profile_result_list_item_profile_width"
           android:layout_height="wrap_content"
-          android:text="@string/profile_result_listview_header_layout"
+          android:text="@string/view_inspector_profile_result_listview_header_layout"
           android:gravity="center"
           android:layout_below="@+id/profile"
           android:layout_toRightOf="@+id/measure"
           style="@style/TextAppearance.AppCompat.Caption"
           />
       <TextView
-          android:layout_width="@dimen/profile_result_list_item_profile_width"
+          android:layout_width="@dimen/view_inspector_profile_result_list_item_profile_width"
           android:layout_height="wrap_content"
-          android:text="@string/profile_result_listview_header_draw"
+          android:text="@string/view_inspector_profile_result_listview_header_draw"
           android:gravity="center"
           android:layout_below="@+id/profile"
           android:layout_toRightOf="@+id/layout"

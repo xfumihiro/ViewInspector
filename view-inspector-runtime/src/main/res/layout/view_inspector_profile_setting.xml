@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/profile_setting_dialog_prompt"
+        android:text="@string/view_inspector_profile_setting_dialog_prompt"
         style="@style/TextAppearance.AppCompat.Medium"
         />
     <TextView

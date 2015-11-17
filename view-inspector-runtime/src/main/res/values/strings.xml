@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">ViewInspector</string>
-  <string name="view_tag">ViewInspector</string>
+  <string name="view_inspector_app_name">ViewInspector</string>
+  <string name="view_inspector_view_tag">ViewInspector</string>
 
   <!-- Menu Item -->
-  <string name="boundary_menu_show_outline">Show Outline</string>
-  <string name="boundary_menu_show_margin">Show Margin</string>
-  <string name="boundary_menu_show_padding">Show Padding</string>
-  <string name="event_menu_set_view_root">Set View Root</string>
-  <string name="event_menu_probe_measures">Probe Measures</string>
-  <string name="event_menu_show_measures">Show Measures</string>
-  <string name="event_menu_profile_view_tree">Profile View Tree</string>
-  <string name="layer_menu_scalpel_3d">Scalpel 3D</string>
-  <string name="layer_menu_wireframe_only">Wireframe Only</string>
-  <string name="layer_menu_show_view_id">Show View ID</string>
-  <string name="profile_result_listview_header_view">View</string>
-  <string name="profile_result_listview_header_measure">Measure</string>
-  <string name="profile_result_listview_header_layout">Layout</string>
-  <string name="profile_result_listview_header_draw">Draw</string>
-  <string name="profile_result_listview_header_profile_msec">Profile (msec)</string>
-  <string name="profile_setting_dialog_prompt">Profile Samples :</string>
-  <string name="settings_menu_log_view_events">Log View Events</string>
-  <string name="settings_menu_set_view_filter">Set View Filter</string>
+  <string name="view_inspector_boundary_menu_show_outline">Show Outline</string>
+  <string name="view_inspector_boundary_menu_show_margin">Show Margin</string>
+  <string name="view_inspector_boundary_menu_show_padding">Show Padding</string>
+  <string name="view_inspector_event_menu_set_view_root">Set View Root</string>
+  <string name="view_inspector_event_menu_probe_measures">Probe Measures</string>
+  <string name="view_inspector_event_menu_show_measures">Show Measures</string>
+  <string name="view_inspector_event_menu_profile_view_tree">Profile View Tree</string>
+  <string name="view_inspector_layer_menu_scalpel_3d">Scalpel 3D</string>
+  <string name="view_inspector_layer_menu_wireframe_only">Wireframe Only</string>
+  <string name="view_inspector_layer_menu_show_view_id">Show View ID</string>
+  <string name="view_inspector_profile_result_listview_header_view">View</string>
+  <string name="view_inspector_profile_result_listview_header_measure">Measure</string>
+  <string name="view_inspector_profile_result_listview_header_layout">Layout</string>
+  <string name="view_inspector_profile_result_listview_header_draw">Draw</string>
+  <string name="view_inspector_profile_result_listview_header_profile_msec">Profile (msec)</string>
+  <string name="view_inspector_profile_setting_dialog_prompt">Profile Samples :</string>
+  <string name="view_inspector_settings_menu_log_view_events">Log View Events</string>
+  <string name="view_inspector_settings_menu_set_view_filter">Set View Filter</string>
 
   <!-- Profile Progressbar -->
-  <string name="profile_progressbar_prompt">Profiling View Tree</string>
-  <string name="profile_progressbar_percentage_mark">%</string>
+  <string name="view_inspector_profile_progressbar_prompt">Profiling View Tree</string>
+  <string name="view_inspector_profile_progressbar_percentage_mark">%</string>
 </resources>
