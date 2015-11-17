@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <!-- ViewInspectorToolbar -->
-  <dimen name="toolbar_header_width">22dp</dimen>
-  <dimen name="toolbar_icon_width">48dp</dimen>
-  <dimen name="toolbar_closed_width">48dp</dimen>
-  <dimen name="toolbar_height">25dp</dimen>
-  <dimen name="toolbar_height_m">24dp</dimen>
+  <dimen name="view_inspector_toolbar_header_width">22dp</dimen>
+  <dimen name="view_inspector_toolbar_icon_width">48dp</dimen>
+  <dimen name="view_inspector_toolbar_closed_width">48dp</dimen>
+  <dimen name="view_inspector_toolbar_height">25dp</dimen>
+  <dimen name="view_inspector_toolbar_height_m">24dp</dimen>
 
   <!-- Menu -->
-  <dimen name="menu_width">240dp</dimen>
-  <dimen name="menu_item_height">56dp</dimen>
+  <dimen name="view_inspector_menu_width">240dp</dimen>
+  <dimen name="view_inspector_menu_item_height">56dp</dimen>
 
   <!-- Profile Result -->
-  <dimen name="profile_result_list_item_profile_width">48dp</dimen>
-  <dimen name="profile_result_col_header_profile_width">144dp</dimen>
+  <dimen name="view_inspector_profile_result_list_item_profile_width">48dp</dimen>
+  <dimen name="view_inspector_profile_result_col_header_profile_width">144dp</dimen>
 
   <!-- Material dialog -->
-  <dimen name="material_dialog_padding_around_content_area">24dp</dimen>
-  <dimen name="material_dialog_padding_between_title_and_body_text">20dp</dimen>
+  <dimen name="view_inspector_material_dialog_padding_around_content_area">24dp</dimen>
+  <dimen name="view_inspector_material_dialog_padding_between_title_and_body_text">20dp</dimen>
 
   <!-- Profile Progressbar -->
-  <dimen name="profile_progressbar_widget_height">8dp</dimen>
-  <dimen name="profile_progressbar_prompt_padding_left">16dp</dimen>
-  <dimen name="profile_progressbar_prompt_padding_right">24dp</dimen>
-  <dimen name="profile_progressbar_percentage_padding_left">16dp</dimen>
-  <dimen name="profile_progressbar_percentage_mark_padding_right">16dp</dimen>
+  <dimen name="view_inspector_profile_progressbar_widget_height">8dp</dimen>
+  <dimen name="view_inspector_profile_progressbar_prompt_padding_left">16dp</dimen>
+  <dimen name="view_inspector_profile_progressbar_prompt_padding_right">24dp</dimen>
+  <dimen name="view_inspector_profile_progressbar_percentage_padding_left">16dp</dimen>
+  <dimen name="view_inspector_profile_progressbar_percentage_mark_padding_right">16dp</dimen>
 </resources>

@@ -40,9 +40,9 @@ import static android.view.WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
 
   public static WindowManager.LayoutParams createLayoutParams(Context context) {
     Resources res = context.getResources();
-    mLayoutHeight = res.getDimensionPixelSize(R.dimen.toolbar_height);
+    mLayoutHeight = res.getDimensionPixelSize(R.dimen.view_inspector_toolbar_height);
     if (Build.VERSION.SDK_INT == 23) { // MARSHMALLOW
-      mLayoutHeight = res.getDimensionPixelSize(R.dimen.toolbar_height_m);
+      mLayoutHeight = res.getDimensionPixelSize(R.dimen.view_inspector_toolbar_height_m);
     }
 
     final WindowManager.LayoutParams params =
