@@ -8,7 +8,7 @@ buildscript {
 
   dependencies {
     classpath rootProject.ext.androidPlugin
-    classpath 'com.github.xfumihiro.view-inspector:view-inspector-plugin:0.2.0-SNAPSHOT'
+    classpath 'com.github.xfumihiro.view-inspector:view-inspector-plugin:0.2.0'
   }
 }
 

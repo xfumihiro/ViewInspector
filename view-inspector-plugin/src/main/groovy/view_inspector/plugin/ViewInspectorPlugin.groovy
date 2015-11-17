@@ -19,7 +19,7 @@ class ViewInspectorPlugin implements Plugin<Project> {
     }
 
     project.dependencies {
-      debugCompile 'com.github.xfumihiro.view-inspector:view-inspector-runtime:0.2.0-SNAPSHOT'
+      debugCompile 'com.github.xfumihiro.view-inspector:view-inspector-runtime:0.2.0'
 
       // Android dependencies
       debugCompile 'com.android.support:appcompat-v7:21.0.3'
@@ -115,11 +115,11 @@ class ViewInspectorPlugin implements Plugin<Project> {
         if (project.android.compileSdkVersion == 'android-23') {
           project.dependencies
               .add('debugCompile', project.dependencies.create(
-              'com.github.xfumihiro.view-inspector:view-inspector-aspect-v23:0.2.0-SNAPSHOT'))
+              'com.github.xfumihiro.view-inspector:view-inspector-aspect-v23:0.2.0'))
         } else {
           project.dependencies
               .add('debugCompile', project.dependencies.create(
-              'com.github.xfumihiro.view-inspector:view-inspector-aspect:0.2.0-SNAPSHOT'))
+              'com.github.xfumihiro.view-inspector:view-inspector-aspect:0.2.0'))
         }
       }
 

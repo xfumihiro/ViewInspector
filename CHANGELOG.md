@@ -1,6 +1,19 @@
 Change Log
 ==========
 
+Version 0.2.0 *(2015-11-17)*
+----------------------------
+
+ * Aspect related code are now separate modules
+ * Plugin is able to pick modules according to application's API level
+ * Marshmallow is now supported
+ * Fix: Resource files conflict (#49)
+ * Fix: Handle ActionBarOverlayLayout as viewParent case (#43)
+ * Fix: Skip requestFocus (#41)
+ * Fix: Add android.internals to isNotSupportedViewClass (#35)
+ * Fix: Handle resource name not found exception (#34)
+
+
 Version 0.1.4 *(2015-10-29)*
 ----------------------------
 

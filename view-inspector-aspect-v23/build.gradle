@@ -50,7 +50,7 @@ android.libraryVariants.all { variant ->
 }
 
 dependencies {
-  compile 'com.github.xfumihiro.view-inspector:view-inspector-runtime:0.2.0-SNAPSHOT'
+  compile 'com.github.xfumihiro.view-inspector:view-inspector-runtime:0.2.0'
 
   // Android dependencies
   compile rootProject.ext.appcompatV72310
