@@ -3,7 +3,7 @@
     android:id="@+id/text1"
     android:layout_width="match_parent"
     android:layout_height="?android:attr/listPreferredItemHeightSmall"
-    android:paddingStart="32dp"
+    android:paddingLeft="32dp"
     android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
     android:gravity="center_vertical"
     android:checkMark="?android:attr/listChoiceIndicatorSingle"
