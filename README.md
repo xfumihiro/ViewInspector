@@ -49,7 +49,7 @@ apply plugin: 'view-inspector'
 To exclude packages:
 ```
 viewInspector {
-  excludePackages = ['android.widget.Space', 'package.to.exclude']
+  excludePackages = ['android.widget.Space', 'com.squareup.leakcanary.internal']
 }
 ```
 
