@@ -59,6 +59,8 @@ class LayoutResourceParser {
     def className
     if (name == 'View') {
       className = "android.view.View"
+    } else if (name == 'SurfaceView') {
+      className = "android.view.SurfaceView"
     } else if (name == 'WebView') {
       className = "android.webkit.WebView"
     } else if (
