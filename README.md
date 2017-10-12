@@ -7,6 +7,10 @@ View inspection toolbar for android development.
 
 ![](images/sample.gif)
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/cu1HheDZfnqZS4YAy7Hf8bGU/xfumihiro/ViewInspector'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/cu1HheDZfnqZS4YAy7Hf8bGU/xfumihiro/ViewInspector.svg' />
+</a>
+
 Features
 --------
 
