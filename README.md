@@ -1,5 +1,4 @@
-View Inspector Plugin
-=====================
+# View Inspector Plugin
 
 [ ![Download](https://api.bintray.com/packages/xfumihiro/maven/ViewInspector/images/download.svg) ](https://bintray.com/xfumihiro/maven/ViewInspector/_latestVersion)
 
@@ -7,33 +6,31 @@ View inspection toolbar for android development.
 
 ![](images/sample.gif)
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/cu1HheDZfnqZS4YAy7Hf8bGU/xfumihiro/ViewInspector'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/cu1HheDZfnqZS4YAy7Hf8bGU/xfumihiro/ViewInspector.svg' />
-</a>
+## Features
 
-Features
---------
+* Boundary
 
-- Boundary
-  - show outlines
-  - show margins
-  - show paddings
+  * show outlines
+  * show margins
+  * show paddings
 
-- Layer
-  - [Scalpel](https://github.com/JakeWharton/scalpel) features
+* Layer
 
-- Event
-  - [Probe](https://github.com/lucasr/probe) features
-  - Profile View Tree
+  * [Scalpel](https://github.com/JakeWharton/scalpel) features
 
-- Logging
-  - show view life-cycle events in logcat
-![](images/log_view_event.png)
+* Event
 
-- Absolute ZERO effects on non-debug builds
+  * [Probe](https://github.com/lucasr/probe) features
+  * Profile View Tree
 
-Usage
------
+* Logging
+
+  * show view life-cycle events in logcat
+    ![](images/log_view_event.png)
+
+* Absolute ZERO effects on non-debug builds
+
+## Usage
 
 ```groovy
 buildscript {
@@ -51,6 +48,7 @@ apply plugin: 'view-inspector'
 ```
 
 To exclude packages:
+
 ```
 viewInspector {
   excludePackages = ['android.widget.Space', 'com.squareup.leakcanary.internal']
@@ -59,8 +57,8 @@ viewInspector {
 
 [SNAPSHOTS][snap] of the development version. [[usage][snap_sample]]
 
-Inspirations & Dependencies
----------------------------
+## Inspirations & Dependencies
+
 [Scalpel](https://github.com/JakeWharton/scalpel) by Jake Wharton
 
 [Probe](https://github.com/lucasr/probe) by Lucas Rocha
@@ -70,14 +68,14 @@ Sriram Ramani
 
 Toolbar fashion : [Telecine](https://github.com/JakeWharton/Telecine) by Jake Wharton
 
-Developed by
-------------
-Fumihiro Xue
- * [@xfumihiro](https://twitter.com/xfumihiro)
- * [+xfumihiro](https://plus.google.com/u/0/107636471060158273635)
+## Developed by
 
-License
--------
+Fumihiro Xue
+
+* [@xfumihiro](https://twitter.com/xfumihiro)
+* [+xfumihiro](https://plus.google.com/u/0/107636471060158273635)
+
+## License
 
     Copyright 2015 Fumihiro Xue
 
@@ -94,4 +92,4 @@ License
     limitations under the License.
 
 [snap]: https://oss.sonatype.org/content/repositories/snapshots/com/github/xfumihiro/view-inspector/view-inspector-plugin/
-[snap_sample]:https://github.com/xfumihiro/ViewInspector/blob/master/sample/build.gradle
+[snap_sample]: https://github.com/xfumihiro/ViewInspector/blob/master/sample/build.gradle
